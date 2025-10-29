@@ -23,6 +23,10 @@ const  currentData=new Date().getFullYear();
         <input type="password" id="password" placeholder="Enter Your Password" required/>
 
         
+        <label for="password">Confirm Password</label>
+        <input type="password" id="ConfirmPassword" placeholder="Enter Confirm  Password" required/>
+
+        
         <button>Continue</button>
         
         <div class="conditions">

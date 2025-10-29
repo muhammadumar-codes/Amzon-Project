@@ -12,23 +12,31 @@ import { Route, Routes } from 'react-router-dom'
 // ===*Layout*===
 import Layout from './layout/Layout'
 
+// ===*Context*===
+import DataContextProvider from './context/DataContext/DataContext'
+
 // ===*App*===
-export default function App() {   
+export default function App() {
   return (
     <>
-    {/* ===*Routes*=== */}
-      <Routes>
+      {/* // ===*DataContextProvider*=== */}
+      <DataContextProvider>
 
-        <Route element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/CartPage" element={<CartPage />} />
-          <Route path="/ProductCard" element={<ProductCard />} />
-          <Route path="ProductCardDetail" element={<ProductCardDetail />} />
-        </Route>
-        {/* // ===*Login and Registration Page*=== */}
-        <Route path="/LoginPage" element={<LoginPage />} />
-        <Route path="/RegistrationPage" element={<RegistrationPage />} />
-      </Routes>
+        {/* ===*Routes*=== */}
+
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/CartPage" element={<CartPage />} />
+            <Route path="/ProductCard" element={<ProductCard />} />
+            <Route path="ProductCardDetail" element={<ProductCardDetail />} />
+          </Route>
+          
+          {/* // ===*Login and Registration Page*=== */}
+          <Route path="/LoginPage" element={<LoginPage />} />
+          <Route path="/RegistrationPage" element={<RegistrationPage />} />
+        </Routes>
+      </DataContextProvider>
     </>
   )
 }
