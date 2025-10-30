@@ -1,8 +1,8 @@
 import "./Button.css"
-export default function Button(){
+export default function Button({children , ...prop}){
     return (
         <>
-        <h1>Button  Page</h1>
+       <button {...prop}>{children}</button>
         </>
     )
 }

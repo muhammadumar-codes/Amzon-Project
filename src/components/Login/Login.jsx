@@ -3,6 +3,10 @@ import "./Login.css"
 // ===*NavLink*===
 import {NavLink} from "react-router-dom"
 
+
+// ===*components*===
+import Button from "../Button/Button";
+
 // ===* Login*===
 export default function Login(){
 const currentDate=new Date().getFullYear();
@@ -23,7 +27,7 @@ const currentDate=new Date().getFullYear();
       <input type="password" id="password" placeholder="First and last name" required />
 
 
-      <button>Continue</button>
+      <Button className="login-btn">Continue</Button>
 
       <div className="conditions">
         By creating an account, you agree to Amazon's

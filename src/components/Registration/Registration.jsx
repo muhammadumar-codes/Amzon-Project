@@ -3,15 +3,19 @@ import {NavLink} from  "react-router-dom"
 // ===*Css*===
 import "./Registration.css"
 
+// ===*Button*===
+import Button from "../Button/Button";
+
+
 // ===*Registration Page*===
 
 export default function Registration(){
-const  currentData=new Date().getFullYear();
+const  currentYear=new Date().getFullYear();
     return (
        <>
-          <form class="registrationContainer">
-        <img src="https://www.amazon.com/favicon.ico" alt="Amazon Logo" class="amazonLogo"/>
-        <h5 class="ctAccount">Create account</h5>
+          <form className="registrationContainer">
+        <img src="https://www.amazon.com/favicon.ico" alt="Amazon Logo" className="amazonLogo"/>
+        <h5 className="ctAccount">Create account</h5>
 
         <label for="name">Your name</label>
         <input type="text" id="names" placeholder="First and last name" required/>
@@ -25,17 +29,16 @@ const  currentData=new Date().getFullYear();
         
         <label for="password">Confirm Password</label>
         <input type="password" id="ConfirmPassword" placeholder="Enter Confirm  Password" required/>
-
         
-        <button>Continue</button>
+       <Button className="login-btn">Continue</Button>
         
-        <div class="conditions">
+        <div className="conditions">
             By creating an account, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy
                 Notice</a>.
             </div>
-            <h6 class="message"></h6>
+            <h6 className="message"></h6>
             
-            <div class="divider">Already have an account?</div>
+            <div className="divider">Already have an account?</div>
             
             <NavLink to={"/LoginPage"}>
 <span>Sign In </span>
@@ -48,7 +51,7 @@ const  currentData=new Date().getFullYear();
         <a href="#">Privacy Notice</a>
         <a href="#">Help</a>
         <br/><br/>
-        © 1996-{currentData}, Amazon.com, Inc. or its affiliates
+        © 1996-{currentYear}, Amazon.com, Inc. or its affiliates
     <footer/>
 
         
