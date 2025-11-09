@@ -1,5 +1,7 @@
+// ===*Slice*===
 import { createSlice } from '@reduxjs/toolkit'
 
+// ===*Initial All The Amazon product Data *===
 const initial = {
   Data: [
     {
@@ -919,9 +921,11 @@ const productsSlice = createSlice({
   name: 'products',
   initialState: initial,
   reducers: {
-    // Define your reducers
+    // ===*Define the  reducer*===
   },
 })
+
+// ===*Export actions and reducer*===
 
 export const productsReducer = productsSlice.reducer
 export const {} = productsSlice.actions
