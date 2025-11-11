@@ -13,20 +13,24 @@ export function useFetch({ url }) {
       return
     }
 
-    // Create a controller to cancel the request if needed
+    // ===*Create a controller to cancel the request if needed*===
+
     const controller = new AbortController()
 
     const fetchData = async () => {
       try {
         setIsLoading(true)
 
-        // Pass controller.signal to axios to handle cancellation
+        // ===* Pass controller.signal to axios to handle cancellation*===
+
         const response = await axios.get(url, { signal: controller.signal })
 
         setData(response.data)
         setError(null)
       } catch (err) {
-        //  Check if the request was cancelled
+        //
+        // ===*Check if the request was cancelled*===
+
         if (axios.isCancel(err)) {
           console.log(' Request cancelled by the user or unmount.')
         } else {
@@ -40,9 +44,10 @@ export function useFetch({ url }) {
 
     fetchData()
 
-    //  Cleanup: runs when component unmounts
+    // ===*  Cleanup: runs when component unmounts*===
+
     return () => {
-      controller.abort() // ✅ Cancels any ongoing request
+      controller.abort() //
     }
   }, [url])
 

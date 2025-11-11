@@ -38,7 +38,7 @@ const currentDate=new Date().getFullYear();
       <div className="divider">Already have an account?</div>
 
 
-<NavLink to={'/RegistrationPage'}>
+<NavLink to={'/Registration'}>
   <span>Register</span>
 </NavLink>
     </form>

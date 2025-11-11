@@ -65,7 +65,7 @@ export default function Header() {
           </form>
           {/* <!-- Account & Lists --> */}
           <div className="account-section">
-            <NavLink className="sign-in-page" to={'/LoginPage'}>
+            <NavLink className="sign-in-page" to={'/Login'}>
               <div className="account-line1">
                 Hello, <span className="Sign_in_span">Sign In</span>
               </div>

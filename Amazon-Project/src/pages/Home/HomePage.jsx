@@ -2,6 +2,7 @@
 import Carousel from '../../components/Carousel/carousel'
 import ProductCard from '../../components/ProductCard/ProductCard'
 
+
 // ===*Home Page*===
 export default function HomePage() {
   // ===*Data from DataContext*===
@@ -13,6 +14,9 @@ export default function HomePage() {
 
       {/* // ===*Product Cards*=== */}
       <ProductCard />
+
+      {/* // ===*Sign - in components*=== */}
+
     </>
   )
 }

@@ -30,8 +30,8 @@ export default function App() {
           </Route>
           
           {/* // ===*Login and Registration Page*=== */}
-          <Route path="/LoginPage" element={<LoginPage />} />
-          <Route path="/RegistrationPage" element={<RegistrationPage />} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Registration" element={<RegistrationPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
      
